@@ -1,0 +1,391 @@
+
+/** Globales **/
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /** 1rem = 10px. Por default el tamaño de las letras es 16px entonces en rem seria 1.6rem **/
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 2.6rem;
+}
+
+.contenedor {
+    max-width: 120rem; /** 1200px **/
+    margin: 0 auto;
+}
+
+/** Utilidades **/
+.seccion {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.centrar-texto {
+    text-align: center;
+}
+
+.btn-block {
+    display: block !important;
+}
+
+.contenido-centrado {
+    max-width: 80rem;
+}
+
+/** Botones **/
+.boton {
+    padding: 1rem 3rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    margin-top: 2rem;
+    text-align: center;
+    display: inline-block;
+    border: none;
+}
+
+.boton-naranja {
+    background-color: #e08709;
+}
+
+.boton-verde {
+    background-color: #71b100;
+}
+
+/** Header **/
+.site-header {
+    background: #333;
+    padding: 1rem 0 3rem 0;
+}
+
+.site-header.inicio {
+    background-image: url('../img/header.jpg');
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    min-height: 60rem;
+}
+
+.contenido-header {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.contenido-header h1 {
+    color: #fff;
+    padding-bottom: 3rem;
+    max-width: 60rem;
+}
+
+.barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3rem;
+}
+
+/** Navegación **/
+.navegacion a {
+    color: #fff;
+    text-decoration: none;
+    padding-right: 2rem;
+    font-size: 1.8rem;
+}
+
+.navegacion a:hover {
+    color: #71b100;
+}
+
+.navegacion a:last-of-type {
+    padding-right: 0px;
+}
+
+/** Sección Nosotros **/
+.iconos-nosotros {
+    display: flex;
+    justify-content: space-between;
+}
+
+.iconos {
+    flex-basis: calc(33.33% - 1rem);
+}
+
+.iconos h3 {
+    text-transform: uppercase;
+}
+
+/** Sección Anuncios **/
+.contenedor-anuncio {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.anuncio {
+    flex-shrink: 0;
+    flex-basis: calc(33.33% - 1rem);
+    border: 0.1rem solid #b5b5b5;
+    background-color: #f5f5f5;
+    margin-bottom: 2rem;
+}
+
+.contenido-anuncio {
+    padding: 2rem;
+}
+
+.contenido-anuncio h3 {
+    margin: 0;
+}
+
+.iconos-caraceristicas {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.iconos-caraceristicas li {
+    display: flex;
+}
+
+.iconos-caraceristicas img {
+    margin-right: 2rem;
+}
+
+.precio {
+    color: #71b100;
+    font-weight: 900;
+}
+
+.ver-todas {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/** Sección Contactos **/
+.imagen-contacto {
+    background: url('../img/encuentra.jpg');
+    background-position: center center;
+    background-size: cover;
+    height: 40rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.contenido-contacto {
+    flex: 1;
+}
+
+.imagen-contacto p {
+    font-size: 1.7rem;
+}
+
+/** Sección Inferior **/
+.seccion-inferior {
+    display: flex;
+    justify-content: space-between;
+}
+
+.seccion-inferior .blog {
+    flex-basis: 60%;
+}
+
+.seccion-inferior .testimoniales {
+    flex-basis: calc(40% - 2rem);
+}
+
+.texto-entrada {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+}
+
+.texto-entrada .imagen-entrada {
+    flex-basis: 40%;
+}
+
+.texto-entrada .contenido-entrada {
+    flex-basis: calc(60% - 3rem);
+}
+
+.contenido-entrada a {
+    color: #000;
+    text-decoration: none;
+}
+
+.contenido-entrada h3 {
+    margin: 0;
+    line-height: 1.3;
+
+}
+
+.contenido-entrada h3::after {
+    content: "";
+    display: block;
+    width: 15rem;
+    height: .5rem;
+    background-color: #71b100;
+    margin-top: 1rem;
+}
+
+.contenido-entrada span {
+    color: #e08709;
+}
+
+.testimonial {
+    background: #71b100;
+    color: #fff;
+    padding: 2rem;
+    font-size: 2.4rem;
+    font-weight: 300;
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 10rem;
+}
+
+.testimonial blockquote::before {
+    content: '';
+    background-image: url('../img/comilla.svg');
+    width: 4rem;
+    height: 4rem;
+    display: block;
+    position: absolute;
+    left: -2rem;
+}
+
+.testimonial blockquote {
+    position: relative;
+    padding-left: 6rem;
+    line-height: 2;
+}
+
+.testimonial p {
+    text-align: right;
+}
+
+/** Footer **/
+.site-footer {
+    background: #333;
+}
+
+.contenido-footer {
+    padding: 3rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright {
+    color: #fff;
+    margin: 0;
+}
+
+/** Páginas Internas **/
+.contenedor-nosotros {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    column-gap: 3rem;
+}
+
+.texto-nosotros blockquote {
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 0;
+    padding-top: 2rem;
+}
+
+.texto-nosotros p {
+    text-align: justify;
+}
+
+.contenido-centrado p {
+    text-align: justify;
+}
+
+/** Anuncio **/
+.resumen-producto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    /* justify-content: space-evenly;
+    align-items: center; */
+}
+
+/** Contacto **/
+.forma-contacto p {
+    font-size: 1.3rem;
+    color: #707070;
+    margin-bottom: 0;
+}
+
+legend {
+    font-size: 2.5rem;
+    color: #707070;
+}
+
+label {
+    display: block;
+}
+
+input:not([type = submit]),
+textarea, select {
+    background-color: #e1e1e1;
+    padding: 0.8rem;
+    border: none;
+    display: block;
+    width: 100%;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+input[type=radio] {
+    width: auto;
+    margin: 0;
+}
+
+.radio-contacto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30rem;
+    margin-bottom: 2.5rem;
+}
+
+textarea {
+    height: 20rem;
+}
+
+select {
+    appearance: none;
+}
+
